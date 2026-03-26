@@ -1,3 +1,4 @@
+
 CREATE TEMP TABLE tmp_sales AS
 SELECT *
 FROM (
@@ -238,38 +239,6 @@ SELECT
     amount,
     DENSE_RANK() OVER (PARTITION BY customer_id ORDER BY amount DESC) 
 	AS dense_rank_amount
-FROM tmp_sales;
-
-
-
-SELECT
-	sale_id
-	customer_id,
-	amount,
-	AVG(amount) OVER (PARTITION BY customer_id) 
-	AS avg_order_per_customer
-FROM tmp_sales;
-
-
-
-
-SELECT
-	sale_id
-	customer_id,
-	amount,
-	PERCENT_RANK() OVER (PARTITION BY customer_id ORDER BY amount)
-	AS revenue_percent_rank
-FROM tmp_sales;
-
-
-SELECT
-	customer_id,
-	sale_date,
-	amount,
-	LAG(amount) OVER (PARTITION BY customer_id ORDER BY sale_date)
-	AS previous_order_amount,
-	amount- LAG(amount) OVER (PARTITION BY customer_id ORDER BY sale_date)
-	AS difference_from_previous
 FROM tmp_sales;
 
 
