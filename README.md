@@ -103,4 +103,4 @@ Feel free to reach out if you have any questions or feedback!
 
 - **GitHub:** [Buras26](https://github.com/Buras26)
 - **LinkedIn:** [Burastan Hovhannisyan](https://www.linkedin.com/in/burastan-hovhannisyan/)
-- **Email:** yburas.hovhannisyan@gmail.com
+- **Email:** buras.hovhannisyan@gmail.com
