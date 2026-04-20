@@ -1,4 +1,4 @@
-# # 🗄️ SQL Learning Journey
+## 🗄️ SQL Learning Journey
 
 This repository documents my progress as I learn SQL from the ground up using PostgreSQL. Each session folder contains my notes, practice queries, and exercises as I work through the course — from the very basics of relational databases all the way to window functions and stored procedures.
 
@@ -84,25 +84,6 @@ sql-portfolio/
 ├── session-13-final-project/
 └── slides/
 ```
-
----
-
-## 🚀 Getting Started
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/sql-portfolio.git
-   cd sql-portfolio
-   ```
-
-2. **Set up PostgreSQL**  
-   Make sure PostgreSQL is installed and running on your machine. Download it at [postgresql.org](https://www.postgresql.org/download/).
-
-3. **Run a script**
-   ```bash
-   psql -U your_username -d your_database -f session-01-intro-to-relational-databases/queries.sql
-   ```
-
 ---
 
 ## 🎯 Key Skills Demonstrated
