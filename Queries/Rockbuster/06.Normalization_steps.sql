@@ -8,19 +8,17 @@ DROP TABLE IF EXISTS analytics.country CASCADE;
 
 CREATE TABLE analytics.country (
     country_id SERIAL PRIMARY KEY, --autoincrement
-    country_name VARCHAR(50) UNIQUE NOT NULL
-    -- geometry 
+    country_name VARCHAR(50) UNIQUE NOT NULL,
+    geom geometry(MULTIPOLYGON, 4326)
 );
 
-
-
-INSERT INTO analytics.country (country_name)
-SELECT 
-  DISTINCT 
-  a.customer_country,
-  b.geometry
+INSERT INTO analytics.country (country_name, geom)
+SELECT
+    DISTINCT
+    a.customer_country,
+    b.geom
 FROM analytics._stg_rockbuster a
-LEFT JOIN analytics._stg_countries b on (a.country_name=b.country_name)
+LEFT JOIN analytics._stg_world_countries b on (a.customer_country=b.country_name)
 WHERE customer_country IS NOT NULL;
 
 
